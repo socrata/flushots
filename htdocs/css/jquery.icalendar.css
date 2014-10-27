@@ -24,7 +24,7 @@
 	border: none;
 }
 .icalendar_list {
-	display: block;
+	/*display: block;*/
 	list-style-type: none;
 	/* font-size: 80%; */
 	margin: 0px;
@@ -63,7 +63,7 @@ html:first-child .icalendar_list {  /* Opera */
 	text-decoration: none;
 }
 .icalendar_list span {
-	display: inline-block;
+	/* display: inline-block; */
 	width: 0px;
 	height: 16px;
 }

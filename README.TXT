@@ -1,52 +1,28 @@
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+I have again partnered with the Chicago Department of Public Health (CDPH) to create an updated flu shot finder web application. Currently it has all the CDPH free locations and events. It also includes Walgreens, Dominick's, Jewel/Osco, and CVS locations that offer flu shots.
 
-NOTICE: THE FLU SHOTS APP WAS REWRITTEN FOR THE 2013-14 SEASON.  THE UPDATED CODE
-IS HERE: https://github.com/tkompare/flushots2013
+I created this as a volunteer effort. The code that runs it is open, completely free, and reusable by anyone.
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Special thanks to Smart Chicago Collaborative for hosting this thing. Also thanks to Raed Mansour, Dr. Julie Morita, and Commissioner Dr. Bechara Choucair (all with CDPH) for being great to work with.
 
-This application was developed for the Chicago Department of Public Health (CDPH)
-to help Chicago residents locate and find public transportation to CDPH's free
-flu shot clinic events.
+NOTES:
 
-http://flushots.311services.org/
+-- This a HTML/CSS/JavaScript web application. It does have one small PHP file to construct an iCal file for users who want a calendar reminder of one-off events. This PHP file should be simple enough to rewrite in whatever server-side language is available in your environment.
 
-BACKGROUND
-I went to a weekly meeting of civic coders where several city agencies 
-presented. They asked for our help in building interesting applications around
-their available data. I was interested in the free flu shot clinic locations
-since flu season was coming up fast, and I had attended a free flu shot event
-in the past.
+-- I used the generic Bootstrap 3 download, except it has one modified LESS variable: '@screen-sm' was set to '860px'.
 
-I built a prototype application and advertised it via Twitter. CDPH, the
-mayor's office, and a few other civic coders, mainly Juan-Pablo Velez, noticed 
-the tweet. Before I knew it, Juan-Pablo brokered a meeting between CDPH, the
-Mayor's office, and ourselves. The meeting was positive and I began in ernest
-to polish up the application.
+-- If you want to reuse this code for your city/county/province/state, a good place to start is in main.js and altering the properties of the "Default" object at the top of the file.
 
-BITS AND BYTES
-These events were published by the CDPH via their web site (subsequently
-published on the Chicago Data Portal). Other events were given directly by
-CDPH. These events data are published to a Google Fusion Table, where the code
-uses the Google Maps API to retrive those events.
+-- I try to use meaningful variable names, so hopefully the code won't be too hard to follow.
 
-The Fusion Table:
-https://www.google.com/fusiontables/DataSource?snapid=S705126nZTU
+-- The data behind this site is a Google Fusion Table and is found here: https://www.google.com/fusiontables/DataSource?docid=1leqPq9hrsGhnE8NoT00YZn1ITTzhK6BhrF8LNL4
 
-MADD PROPZ
-This web application could not have been as well executed without the sage 
-feedback and assistance of Juan-Pablo Velez and Derek Eder. Thanks also to Smart
-Chicago Collaborative for hosting this web application.
 
-ERRATA
-'flu_logo_720.png' image file is for the City of Chicago's own use and does not
-fall under the license found on LICENSE.TXT. You must replace it in your own
-implementation. It is left here to help you use this code.
 
-This code should be fairly easy to take and use by other government agencies
-offering flu shot clinic events. If you would like any advice on implementing 
-this code, drop me a line.
 
-Tom Kompare
-e: tom@kompare.us
-t: @tomkompare 
+git clone ssh://544e79175973ca33e8000276@flushoot-serozi.rhcloud.com/~/git/flushoot.git/
+cd flushoot/
+This will create a folder with the source code of your application. After making a change, add, commit, and push your changes.
+
+git add .
+git commit -m 'My changes'
+git push
