@@ -1,28 +1,10 @@
-I have again partnered with the Chicago Department of Public Health (CDPH) to create an updated flu shot finder web application. Currently it has all the CDPH free locations and events. It also includes Walgreens, Dominick's, Jewel/Osco, and CVS locations that offer flu shots.
+We were so impressed by the work that @tkompare did on his [Chicago Flu Shots](https://github.com/tkompare/flushots2013) web application for the 2013 flu season, that we decided to fork and improve upon it for the 2014 season. Our version has one big change - instead of being based on [Google Fusion Tables](https://tables.google.com/), it's instead powered by a [Socrata Open Data API](http://dev.socrata.com).
 
-I created this as a volunteer effort. The code that runs it is open, completely free, and reusable by anyone.
+## About this app
 
-Special thanks to Smart Chicago Collaborative for hosting this thing. Also thanks to Raed Mansour, Dr. Julie Morita, and Commissioner Dr. Bechara Choucair (all with CDPH) for being great to work with.
+## Deploying this app
 
-NOTES:
-
--- This a HTML/CSS/JavaScript web application. It does have one small PHP file to construct an iCal file for users who want a calendar reminder of one-off events. This PHP file should be simple enough to rewrite in whatever server-side language is available in your environment.
-
--- I used the generic Bootstrap 3 download, except it has one modified LESS variable: '@screen-sm' was set to '860px'.
-
--- If you want to reuse this code for your city/county/province/state, a good place to start is in main.js and altering the properties of the "Default" object at the top of the file.
-
--- I try to use meaningful variable names, so hopefully the code won't be too hard to follow.
-
--- The data behind this site is a Google Fusion Table and is found here: https://www.google.com/fusiontables/DataSource?docid=1leqPq9hrsGhnE8NoT00YZn1ITTzhK6BhrF8LNL4
+1. [Fork the repo on Github](https://github.com/socrata/flushots/fork) so that you have your own copy to work with.
+2. Locate data about t
 
 
-
-
-git clone ssh://544e79175973ca33e8000276@flushoot-serozi.rhcloud.com/~/git/flushoot.git/
-cd flushoot/
-This will create a folder with the source code of your application. After making a change, add, commit, and push your changes.
-
-git add .
-git commit -m 'My changes'
-git push
