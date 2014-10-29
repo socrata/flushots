@@ -1,3 +1,5 @@
+---
+---
 (function($,TkMap,Flushots){
   /**
    * @classDescription - Default settings for this application
@@ -9,7 +11,7 @@
     // DOM ID of where the Google Map is to be rendered
     domid:'map',
     // Google maps API key
-    googlemapsapikey:'AIzaSyCZyT6gk-tkkZwmlg9zovl2oIol0v1ZXK8',
+    googlemapsapikey:'{{site.gmaps_api_key}}',
     // Icon for other for-fee events
     iconfee:'/img/red.png',
     // Icon for Free events
@@ -35,11 +37,11 @@
       enableEventPropagation: false
     },
     // Start center latutude of the Google map
-    lat:35.818835,
+    lat: {{site.start_latitude}},
     // Start center longitude of the Google map
-    lng:-78.64459,
+    lng: {{site.start_longitude}},
     // State
-    state:'North Carolina',
+    state:'{{site.state}}',
     // Defined style types passed to TkMap
     styles:'grey minlabels',
     // Initial zoom level for the Google map
@@ -83,8 +85,8 @@
       FindMeDiv.index = 1;
       Map.Map.controls[google.maps.ControlPosition.TOP_RIGHT].push(FindMeDiv);
     }
-    //Gets data from socrata
-    var sodaUrl = 'http://brigades.opendatanetwork.com/resource/7mef-4h72.json';
+    //Gets data from Socrata
+    var sodaUrl = '{{site.api_endpoint}}?$$app_token={{site.socrata_app_token}}';
     var RawFlu = new Socrata(sodaUrl);
     $.getJSON(sodaUrl)
     .done(function(res) {
