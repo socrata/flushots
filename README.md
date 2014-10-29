@@ -1,4 +1,7 @@
-We were so impressed by the work that [@tkompare](https://github.com/tkompare) did on his [Chicago Flu Shots](https://github.com/tkompare/flushots2013) web application for the 2013 flu season, that we decided to fork and improve upon it for the 2014 season. Our version has one big change - instead of being based on [Google Fusion Tables](https://support.google.com/fusiontables/answer/2571232), it's instead powered by a [Socrata Open Data API](http://dev.socrata.com).
+We were so impressed by the work that [@tkompare](https://github.com/tkompare) did on his [Chicago Flu Shots](https://github.com/tkompare/flushots2013) web application for the 2013 flu season, that we decided to fork and improve upon it for the 2014 season. Our version has two big changes:
+
+- Instead of being based on [Google Fusion Tables](https://support.google.com/fusiontables/answer/2571232), it's instead powered by a [Socrata Open Data API](http://dev.socrata.com).
+- It's been simplified and improved for easy deployment on [Github Pages](http://pages.github.com)
 
 ## About the Flu Shot Finder
 
@@ -8,43 +11,31 @@ Given data about the location and hours of flu shot providers in your area, this
 
 ## Modifying 
 
+The app is built on [Github Pages](http://pages.github.com) and makes use of [Jekyll](http://jekyllrb.com) to plumb configuration variables into various places on the app, so its easy to redeploy a customized version of the Flu Shot Finder without writing any new code.
+
 1. [Fork the repo on Github](https://github.com/socrata/flushots/fork) so that you have your own copy to work with.
 2. Locate data about the location of flu shot providers in your area. Hopefully, your local or state government has already provided this data, but if not, you can learn more about data hosting below.
-3. If your data is already compliant with the schema below, you'll be able to use the app mostly without modifications. However, you'll still need to modify a few things:
-  1. You'll need to change `sodaUrl` in `js/main.js:91` to the [API Endpoint](http://dev.socrata.com/docs/endpoints.html) for your dataset.
-  2. Modify the branding in the `.modal-cdph` div in `index.html` to reflect your own instance of the app.
-  3. Replace the [Google Maps API](https://developers.google.com/maps/) key in `index.html` with your own key.
-  4. Update the city in `js/main.js`
-4. If your data isn't compliant with the schema below, you can remap your data schema in `js/main.js`
+    - If your data is already compliant with the schema below, you'll be able to use the app mostly without modifications. However, you'll still need to update the config in `_config.yml`. For details on how to configure the app, see "Configuration Options" below.
+    - If your data isn't compliant with the schema below, or if you need to data cleanup on the fly, you can remap your data schema in [`js/main.js:93`](https://github.com/socrata/flushots/blob/gh-pages/js/main.js#L93). In our example, we've done some cleanup of our own, setting default start and end dates and times for locations that haven't provided their own. You can tweak that code to address any issues you've got with your data schema and contents.
+3. Commit and push your updated code to your fork. 
 
-## Deploying
+Within a few minutes, your app will be available at <http://yourusername.github.io/flushots>! Using Github Pages' [custom domain name](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/) functionality, you can also put it at a domain of your choosing.
 
-Flu Shots deployment using OpenShift
+## Configuration Options
 
-OpenShift is a platform-as-a-service (PaaS) that lets you quickly and easily deploy Django/Python apps to a production hosting environment. The OpenShift software is open source so you can either run it on servers that you own or rent, or you can use Redhat's hosted OpenShift service at http://openshift.redhat.com
+In [`_config.yml`](https://github.com/socrata/flushots/blob/gh-pages/_config.yml), you'll find a number of configuration options you'll need to update for your deployment:
 
-######  Step 1: Sign Up for an Account
-
-Go to here and sign up for an account. You only need to signup for a free account. Skip if you has already had an account there.
-
-###### Step 2: Setup Your Publish Key
-
-You will need a public key for connection between you and  OpenShift later. A public key is  a plain text file usually name id_rsa.pub that's located in ~/.ssh/. 
-
-So if you are on a Mac, it's in /Users/[your_username]/.ssh/id_rsa.pub or if you are on Linux it's in /home/[your_user_name]/.ssh/id_rsa.pub. You need to copy content of this file and update it with OpenShift so OpenShift is aware of your public key. When you make a connection to OpenShift from the terminal (that is, when you SSH to your box and are pushing code), OpenShift will identify and authorize you by based on your public/private key.
-
-If you are not familiar with the public key concept, [this tutorial](http://code.tutsplus.com/tutorials/ssh-what-and-how--net-25138) will give you a solid background for it.
-
-###### Step 3: Setup Your Application
-
-- Add an Application from https://openshift.redhat.com/app/console/applications
-- Choose a type of application: PHP 5+ Cartridge
-- Configure the application by adding a public url, url to your git respository and selecting a nearby region.
-
-###### Step 4: Your application has been created.
-
-- Following the instructions for making code changes
-- Continue to the application overview page for additional settings
+- `gmaps_api_key` - Replace the [Google Maps API](https://developers.google.com/maps/) key with your own key
+- `title` - The name of your instance of the application
+- `logo` - The path to your logo image within the repository, or a full URL if hosted elsewhere
+- `locality` - The city, county, or state name for your app
+- `flu_info_link` - Where visitors can find additional information about the incidence of flu in your area
+- `start_latitude` - The latitude of the start point that the app should center on when first loading
+- `start_longitude` - The longitude of the start point that the app should center on when first loading
+- `state` - The state name for your deployment, used for geocoding where a state wasn't provided by the user
+- `api_endpoint` - The [API Endpoint](http://dev.socrata.com/docs/endpoints.html) for the dataset API providing your data
+- `socrata_app_token` - The [Socrata App Token](http://dev.socrata.com/docs/app-tokens.html) that you've registered for your application
+- `about` - The [Markdown](http://daringfireball.net/projects/markdown/syntax)-formatted about text to be displayed when clicking on the site logo
 
 ## Data Schema
 
