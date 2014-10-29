@@ -1,4 +1,4 @@
-// Get the flu shot event data from the socrata data set
+// Get the flu shot event data from the Socrata data set
 var Socrata = function(endpoint){
   this.url = endpoint;
   this.data; 

@@ -1,7 +1,6 @@
 destination: public
 exclude: [Gemfile, Gemfile.lock, .ruby-*, public]
 
-
 gmaps_api_key: AIzaSyCZyT6gk-tkkZwmlg9zovl2oIol0v1ZXK8
 title: "Raleigh, NC: Get A Flu Shot"
 logo: "img/logo.png"
