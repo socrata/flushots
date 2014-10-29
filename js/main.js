@@ -95,7 +95,7 @@
         if(rec.begin_date == null) rec.begin_date = Date.today().toDateString();
         if(rec.begin_time == null) rec.begin_time = "09:00 AM";
         if(rec.end_date == null) rec.end_date = Date.today().toDateString();
-        if(rec.end_time == null) rec.end_time = "06:00 PM";
+        if(rec.end_time == null) rec.end_time = "05:00 PM";
         if(rec.recurrence_days == null) rec.recurrence_days = "Monday,Tuesday,Wednesday,Thursday,Friday";
       });
 
