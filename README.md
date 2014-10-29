@@ -51,7 +51,7 @@ If you are not familiar with the public key concept, [this tutorial](http://code
 - `facility_name` - The name of the facility providing the vaccinations
 - `begin_date` - The begin date (example: 10/17/2014) for a timeframe for when the facility will be open for vaccinations
 - `begin_time` - The start time (example: 9:00:00) for when the facility will be open for vaccinations
-- `contact` - A contact name listed for the facility. (optional)
+- `contact` - A contact name listed for the facility
 - `cost` - Vaccination costs. For example, "No cost to individual. If insured, insurance will be billed."
 - `end_date` - The end date for a timeframe for when the facility will be open for vaccinations
 - `end_time` - The end time for when the facility will be open for vaccinations
