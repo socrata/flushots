@@ -1,0 +1,13 @@
+destination: public
+exclude: [Gemfile, Gemfile.lock, .ruby-*, public]
+
+
+gmaps_api_key: AIzaSyCZyT6gk-tkkZwmlg9zovl2oIol0v1ZXK8
+title: "Raleigh, NC: Get A Flu Shot"
+locality: "Raleigh, North Carolina"
+flu_info_link: http://www.flu.nc.gov/
+about:
+  Developed orginally by [Tom Kompare](http://about.me/tomkompare) in partnership with the [NC Department of Public Health (CDPH)](http://www.cityofchicago.org/city/en/depts/cdph.html). This map application is developed in partnership with [Code for Raleigh](http://www.codeforraleigh.com) and Socrata. 
+
+  [The code behind this web application](https://github.com/socrata/flushots) is free, open, and under a [MIT License](https://github.com/socrata/flushots/blob/master/LICENSE). The data behind the application is a [ Socrata dataset](https://brigades.opendatanetwork.com/HEALTH/North-Carolina-Flu-Shot-Locations/7mef-4h72) hosted on the [Brigade Open Data Sharing Platform.](https://brigades.opendatanetwork.com/)
+
