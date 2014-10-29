@@ -46,8 +46,6 @@ If you are not familiar with the public key concept, [this tutorial](http://code
 - Following the instructions for making code changes
 - Continue to the application overview page for additional settings
 
-
-
 ## Data Schema
 
 - `facility_name` - The name of the facility providing the vaccinations
