@@ -11,7 +11,7 @@ start_latitude: 35.818835
 start_longitude: -78.64459
 state: North Carolina
 api_endpoint: http://brigades.opendatanetwork.com/resource/7mef-4h72.json
-socrata_app_token: CGxaHQoQlgQSev4zyUh5aR5J3
+socrata_app_token: HCvAA8iIMxefx6BzUAEQN0wqE
 about:
   Developed orginally by [Tom Kompare](http://about.me/tomkompare) in partnership with the [NC Department of Public Health (CDPH)](http://www.cityofchicago.org/city/en/depts/cdph.html). This map application is developed in partnership with [Code for Raleigh](http://www.codeforraleigh.com) and Socrata. 
 
