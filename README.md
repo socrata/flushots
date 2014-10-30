@@ -40,19 +40,19 @@ In [`_config.yml`](https://github.com/socrata/flushots/blob/gh-pages/_config.yml
 ## Data Schema
 
 - `facility_name` - The name of the facility providing the vaccinations
-- `begin_date` - The begin date (example: 10/17/2014) for a timeframe for when the facility will be open for vaccinations
-- `begin_time` - The start time (example: 9:00:00) for when the facility will be open for vaccinations
+- `begin_date` - The begin date for a timeframe for when the facility will be open for vaccinations. (M/d/yyyy e.g. "1/4/1982") 
+- `begin_time` - The start time (example: 9:00:00) for when the facility will be open for vaccinations. (hh:mm:ss e.g. "12:00:00")
 - `contact` - A contact name listed for the facility
 - `cost` - Vaccination costs. For example, "No cost to individual. If insured, insurance will be billed."
-- `end_date` - The end date for a timeframe for when the facility will be open for vaccinations
-- `end_time` - The end time for when the facility will be open for vaccinations
-- `hours` - List the hours for when the facility will be open. For example, Mon-Fri: 9:00 AM-9:00 PM, Sat: 9:00 AM-5:00 PM"
+- `end_date` - The end date for a timeframe for when the facility will be open for vaccinations. (M/d/yyyy e.g. "1/4/1982")
+- `end_time` - The end time for when the facility will be open for vaccinations. (hh:mm:ss e.g. "12:00:00")
+- `hours` - List the hours for when the facility will be open. For example, Mon-Fri: 9:00 AM-9:00 PM, Sat: 9:00 AM-5:00 PM" 
 - `id` - Assign an unique numeric value for each row
 - `latitude` - The latitude value for the location of the facility
 - `longitude` - The longitude value for the location of the facility
 - `notes` - Additional notes. For example, "Free to individual. Insurance will be billed. Closed 2nd Wed every month 12 to 4 PM"
 - `phone` - The phone number for the facility providing the vaccinations
-- `recurrence_days` - The days of the week the facility is open between the begin_date and end_date. For example, "Sunday, Monday, Tuesday, Wednesday, Thursday"
+- `recurrence_days` - The days of the week the facility is open between the begin_date and end_date. A comma-separated list is required. For example, "Sunday, Monday, Tuesday, Wednesday, Thursday"
 - `url` - An unique url assocated with the vaccinations for a specific location
 - `street1` - Primary street address of the facility. For example, "7811 S Rachine Ave"
 - `street2` - Secondary street address of the facility. For example, "2nd Floor"
